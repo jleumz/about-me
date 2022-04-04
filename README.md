@@ -7,4 +7,4 @@
 - make changes 
 - run `npm run build`
 - push to `main`
-- run `git subtree --prefix public/ origin gh-pages`
+- run `git subtree push --prefix public/ origin gh-pages`
