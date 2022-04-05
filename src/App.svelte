@@ -2,25 +2,30 @@
     export let name: string;
 </script>
 
+
+<header class="header-blur">
+    <nav>
+        <img src="icon.png" alt="logo" />
+    </nav>
+</header>
 <main>
-    <div class="header-blur">
-        <nav>
-            <img src="icon.png" alt="logo" />
-        </nav>
-    </div>
     <h1>Hey.</h1>
     <section>
         <h1>Test</h1>
-        <details>
+        <a href="https://www.google.com" target="_blank"><p>Hello</p></a>
+        <details class="basic">
             <summary>Click to toggle content</summary>
             <p>I am content</p>
         </details>
+        <h2>Test</h2>
+        <h3>Test</h3>
     </section>
     <section>
         <h1>Test</h1>
     </section>
     <section><h1>Test</h1></section>
 </main>
+<footer>Footer</footer>
 
 <style>
     main {
@@ -37,6 +42,22 @@
         z-index: 1;
     }
 
+    .basic {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+        color: #222;
+    }
+
+    summary {
+        cursor: pointer;
+    }
+
+    /* change marker of toggle */
+    /* details[open] > summary::marker {
+        display: none;
+        content: "- ";
+    } */
+
     nav {
         display: flex;
         flex-direction: row;
@@ -49,13 +70,6 @@
         height: 50px;
         object-fit: fill;
         padding-right: 1vw;
-    }
-
-    h1 {
-        color: #ff3e00;
-        text-transform: uppercase;
-        font-size: 4em;
-        font-weight: 100;
     }
 
     section {
