@@ -2,6 +2,8 @@
 
 ## todo
 - [ ] add information about me
+- [ ] responsive container
+
 
 ## workflow
 - make changes 
