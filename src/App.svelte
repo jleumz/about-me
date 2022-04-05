@@ -9,17 +9,6 @@
         </nav>
     </div>
     <h1>Hey.</h1>
-    <section>
-        <h1>Test</h1>
-        <details>
-            <summary>Click to toggle content</summary>
-            <p>I am content</p>
-        </details>
-    </section>
-    <section>
-        <h1>Test</h1>
-    </section>
-    <section><h1>Test</h1></section>
 </main>
 
 <style>
