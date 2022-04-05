@@ -1,7 +1,7 @@
-name: GitHub Actions Demo
+name: Build and publish
 on: workflow_dispatch
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -15,9 +15,11 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: npm install
       - run: npm run build
 
-  Deploy:
+  publish:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - run: echo "Publish personal website"
