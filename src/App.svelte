@@ -8,7 +8,7 @@
             <img src="icon.png" alt="logo" />
         </nav>
     </div>
-    <h1>Hey.</h1>
+    <h1>Hello {name}!</h1>
 </main>
 
 <style>
@@ -47,14 +47,14 @@
         font-weight: 100;
     }
 
-    section {
+    /* section {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         min-height: 100%;
         padding: 100px 10vw;
-    }
+    } */
 
     @media (min-width: 640px) {
         main {
