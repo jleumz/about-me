@@ -23,4 +23,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Publish personal website"
-      # - run: git subtree push --prefix public/ origin gh-pages
+      - run: git subtree push --prefix public/ origin gh-pages
