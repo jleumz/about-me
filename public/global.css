@@ -29,6 +29,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
 
 body {
@@ -42,8 +43,12 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+body.dark-theme {
+  background-color: var(--global-text-color);
+  color: var(--global-background-color);
+}
+
 a {
-  /* color: rgb(0, 100, 200); */
   text-decoration: none;
 }
 

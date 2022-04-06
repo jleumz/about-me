@@ -6,6 +6,7 @@
 - [ ] add information about me
 - [ ] responsive container
 - [ ] scroll css animate
+- [x] dark mode
 
 ## workflow
 
