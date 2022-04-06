@@ -46,12 +46,14 @@
     align-items: center;
   }
 
+
   /* img {
   width: 50px;
   height: 50px;
   object-fit: fill;
   padding-right: 1vw;
 } */
+
 
   /* section {
     position: relative;
