@@ -1,68 +1,132 @@
+:root {
+  --global-background-color: #fff;
+  --global-text-color: #333;
+  --global-link-color: #005f6a;
+  --global-orange-color: #ff3e00;
+  /* Github actions colors */
+  --global-muted-grey-color: #57606a;
+  --global-grey-color: #24292f;
+}
+
+/* appearing new section */
+/* .build-in-scale-up {
+    opacity: 0;
+    transition: opacity .7s cubic-bezier(0.16, 1, 0.3, 1),transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(0.96) translateY(24px);
+} */
+
+/* .build-in-scale-up.build-in-animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+} */
+
+html {
+  background-color: var(--global-background-color);
+}
+
 html,
 body {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
 
 body {
-    color: #333;
-    margin: 0;
-    /* padding: 8px; */
-    box-sizing: border-box;
-    /* font-family: 'Roboto Slab', serif; */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--global-text-color);
+  /* color: #005f6a; */
+  margin: 0;
+  /* padding: 8px; */
+  box-sizing: border-box;
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body.dark-theme {
+  background-color: var(--global-text-color);
+  color: var(--global-background-color);
 }
 
 a {
-    color: rgb(0, 100, 200);
-    text-decoration: none;
+  text-decoration: none;
+}
+
+a > p {
+  color: var(--global-link-color);
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: var(--global-link-color);
+  opacity: 0.85;
 }
 
 a:visited {
-    color: rgb(0, 80, 160);
+  color: rgb(0, 80, 160);
+}
+
+a:active {
+  opacity: 0.6;
 }
 
 label {
-    display: block;
+  display: block;
+}
+
+h1 {
+  color: var(--global-orange-color);
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+h2 {
+  color: var(--global-orange-color);
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 80;
+}
+
+h3 {
+  color: var(--global-orange-color);
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 70;
 }
 
 input,
 button,
 select,
 textarea {
-    font-family: inherit;
-    font-size: inherit;
-    -webkit-padding: 0.4em 0;
-    padding: 0.4em;
-    margin: 0 0 0.5em 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-padding: 0.4em 0;
+  padding: 0.4em;
+  margin: 0 0 0.5em 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
 }
 
 input:disabled {
-    color: #ccc;
+  color: #ccc;
 }
 
 button {
-    color: #333;
-    background-color: #f4f4f4;
-    outline: none;
+  color: #333;
+  background-color: #f4f4f4;
+  outline: none;
 }
 
 button:disabled {
-    color: #999;
+  color: #999;
 }
 
 button:not(:disabled):active {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 button:focus {
-    border-color: #666;
+  border-color: #666;
 }
