@@ -23,7 +23,7 @@
   }
 
   .header-blur {
-    backdrop-filter: saturate(1.5) blur(20px);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -46,14 +46,12 @@
     align-items: center;
   }
 
-
   /* img {
   width: 50px;
   height: 50px;
   object-fit: fill;
   padding-right: 1vw;
 } */
-
 
   /* section {
     position: relative;
