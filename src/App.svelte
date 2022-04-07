@@ -4,13 +4,9 @@
   import Home from "./components/Home.svelte";
   import Laboratory from "./components/lab/Laboratory.svelte";
   import Footer from "./components/Footer.svelte";
-  const basepath = window?.process ? window.process?.env?.PUBLIC_URL : "/";
-
-  // TODO: remove log
-  console.log(`Basepath: ${basepath}`);
 </script>
 
-<Router basepath="{basepath}">
+<Router>
   <header class="header-blur">
     <nav>
       <Toggle />
@@ -20,7 +16,7 @@
     <Route path="/">
       <Home />
     </Route>
-    <Route path="lab">
+    <Route path="lab" primary="{false}">
       <Laboratory />
     </Route>
   </main>
