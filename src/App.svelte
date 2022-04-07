@@ -6,7 +6,7 @@
   import Footer from "./components/Footer.svelte";
 </script>
 
-<Router>
+<Router basepath="/">
   <header class="header-blur">
     <nav>
       <Toggle />
