@@ -1,18 +1,27 @@
 <script lang="ts">
+  import { Router, Route } from "svelte-navigator";
   import Toggle from "./components/Toggle.svelte";
-
-  export let name: string;
+  import Home from "./components/Home.svelte";
+  import Laboratory from "./components/lab/Laboratory.svelte";
+  import Footer from "./components/Footer.svelte";
 </script>
 
-<header class="header-blur">
-  <nav>
-    <Toggle />
-  </nav>
-</header>
-<main>
-  <h1>Hello, {name}!</h1>
-</main>
-<footer></footer>
+<Router>
+  <header class="header-blur">
+    <nav>
+      <Toggle />
+    </nav>
+  </header>
+  <main>
+    <Route path="/">
+      <Home />
+    </Route>
+    <Route path="lab">
+      <Laboratory />
+    </Route>
+  </main>
+  <Footer />
+</Router>
 
 <style>
   main {
@@ -20,6 +29,7 @@
     /* padding: 1em; */
     max-width: 240px;
     margin: 0 auto;
+    height: 100%;
   }
 
   .header-blur {
@@ -28,10 +38,6 @@
     top: 0;
     z-index: 1;
   }
-
-  /* summary {
-    cursor: pointer;
-  } */
 
   /* change marker of toggle */
   /* details[open] > summary::marker {

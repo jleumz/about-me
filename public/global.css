@@ -1,7 +1,7 @@
 :root {
   --global-background-color: #fff;
   --global-text-color: #333;
-  --global-link-color: #005f6a;
+  --global-link-color: #57606a;
   --global-orange-color: #ff3e00;
   /* Github actions colors */
   --global-muted-grey-color: #57606a;
@@ -48,8 +48,14 @@ body.dark-theme {
   color: var(--global-background-color);
 }
 
+body.dark-theme a {
+  color: var(--global-background-color);
+  text-decoration-color: var(--global-background-color);
+}
+
 a {
   text-decoration: none;
+  color: var(--global-link-color);
 }
 
 a > p {
@@ -63,7 +69,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(0, 80, 160);
+  color: var(--global-visited-color);
 }
 
 a:active {

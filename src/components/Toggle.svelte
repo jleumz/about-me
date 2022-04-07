@@ -1,15 +1,31 @@
 <script>
-  let isDark = false;
+  import { onMount } from "svelte";
+  import { DARKMODE } from "../constants";
+
+  let darkmodeActive = window.localStorage.getItem(DARKMODE)
+    ? window.localStorage.getItem(DARKMODE) == "true"
+    : false;
+
+  onMount(() => {
+    setDarkmode();
+  });
+
+  const setDarkmode = () => {
+    window.localStorage.setItem(DARKMODE, darkmodeActive);
+    darkmodeActive
+      ? document.body.classList.add("dark-theme")
+      : document.body.classList.remove("dark-theme");
+  };
 </script>
 
 <div class="container">
   <label class="switch">
     <input
       type="checkbox"
-      bind:checked="{isDark}"
-      on:change="{() => document.body.classList.toggle('dark-theme')}"
+      bind:checked="{darkmodeActive}"
+      on:change="{setDarkmode}"
     />
-    {#if isDark}
+    {#if darkmodeActive}
       <img src="light_mode_white_filled.svg" alt="light-mode-icon" />
     {:else}
       <img src="dark_mode_black_filled_rounded.svg" alt="dark-mode-icon" />
